@@ -594,10 +594,35 @@ network:
     "ValidationFunction": "Null",
     "Timepoint": "BridgeTimepoint"
 }
+
+  typesBundle: {
+    spec: {
+      kusama: {
+        types: [
+        {
+          minmax: [
+            1030,
+            1031
+          ],
+          types: {
+            {
+            "MultisigAccount": {
+            "signatories": "Vec<AccountId>",
+            "threshold": "u8"},
+            "ValidationFunction": "Null",
+            "Timepoint": "Null"
+            }
+          }
+        }
+        ],
+      }
+    }
+  }
+
 dataSources:
   - name: main
     kind: substrate/Runtime
-    startBlock: 0
+    startBlock: 124267
     mapping:
       handlers:
 
